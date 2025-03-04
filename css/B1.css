@@ -2,15 +2,24 @@ header {
     width: 100%;
     background-color: #e6e600;
 }
-footer {
-    width: 100%;
-    background-color: #e6e600;
-}
 .inner {
     height: 100px;
     width: 1200px;
     margin: 0 auto;
     background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 200px;
+    height: 60px;
+    background-color: yellow;
+}
+.nav {
+    height: 100px;
+    width: 800px;
+    background-color: yellowgreen;
 }
 .main {
     height: 500px;
@@ -24,4 +33,28 @@ footer {
 .content {
     height: 200px;
     background-color: #666600;
+    display: flex;
+}
+.con1, .con3 {
+    width: 33.33%;
+    background-color: yellowgreen;
+}
+.con2 {
+    width: 33.33%;
+    background-color: pink;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #e6e600;
+}
+.f1, .f3 {
+    width: 20%;
+    height: 50px;
+    background-color: lightgray;
+}
+.f2 {
+    width: 60%;
+    height: 50px;
+    background-color: yellow;
 }
