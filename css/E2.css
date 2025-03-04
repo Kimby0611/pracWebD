@@ -1,0 +1,84 @@
+.wrap {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+.aside {
+    width: 200px;
+    height: 900px;
+}
+.logo {
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 3px 3px 3px gray,
+                 6px 6px 10px black;
+}
+.nav {
+    text-align: center;
+    position: relative;
+}
+.musTitle {}
+.nav > div {
+    margin-bottom: 40px;
+}
+.musInfo {
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, left 0.3s ease;
+}
+.musInfo div {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+.musInfo div:last-child {
+    border-bottom: none;
+}
+.nav > div:hover .musInfo {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+.mainContent {
+    width: 400px;
+    height: 900px;
+}
+.info {
+    height: 400px;
+}
+.pic {
+    height: 400px;
+}
+.link {
+    height: 100px;
+}
+.imgDiv {
+    width: calc(100% - 200px - 400px);
+}
+footer {
+    display: block;
+    width: 100%;
+}
+footer div {
+    float: left;
+}
+.f1 {
+    width: 20%;
+}
+.f2 {
+    width: 60%
+}
+.f3 {
+    width: 20%;
+}

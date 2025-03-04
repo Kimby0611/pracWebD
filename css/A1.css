@@ -46,6 +46,7 @@ header {
     display: flex;
     justify-content: space-around;
     padding: 0;
+    z-index: 1;
 }
 .dropdown .sub-menu {
     flex: 1;
