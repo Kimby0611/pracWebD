@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+header {
+    width: 200px;
+    height: 650px;
+    background-color: #b3d998;
+}
+.main {
+    width: 800px;
+    height: 650px;
+    background-color: #888;
+    float: left;
+    height: 100px;
+}
+.slideContent {
+    height: 350px;
+    background-color: #1a8cff;
+}
+.content {
+    height: 200px;
+    background-color: #0059b3;
+}
+.content div {
+    float: left;
+    width: 266px;
+}
+footer {
+    height: 100px;
+    background-color: #b3d9ff;
+    display: block;
+}
+.f1, .f_right {
+    float: left;
+    height: 100px;
+}
+.f1 {
+    width: 600px;
+}
+.f_right div {
+    height: 50px;
+}

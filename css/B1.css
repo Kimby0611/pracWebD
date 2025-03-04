@@ -1,0 +1,27 @@
+header {
+    width: 100%;
+    background-color: #e6e600;
+}
+footer {
+    width: 100%;
+    background-color: #e6e600;
+}
+.inner {
+    height: 100px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: red;
+}
+.main {
+    height: 500px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.slideContent {
+    height: 300px;
+    background-color: #b3b300;
+}
+.content {
+    height: 200px;
+    background-color: #666600;
+}
