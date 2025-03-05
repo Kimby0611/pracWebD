@@ -24,8 +24,17 @@ nav > ul {
     margin: 0;
     padding: 0;
 }
+.menu {
+    position: relative;
+}
 .submenu {
     display: none;
     position: absolute;
     z-index: 997;
+    top: 50px;
 }
+.submenu li {
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
+.submenu li:last-child { border-bottom: none; }
