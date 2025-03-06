@@ -1,3 +1,10 @@
+//변수 선언
+var slide = $('.slide');
+var sno = 0;
+var eno = slide.length - 1;
+var tiemr = setInterval('autoslide()', 3000);
+
+//메뉴 슬라이드
 $(function () {
     $('header > nav').hover(function () {
         $(this).find('.submenu').stop().slideDown(500)
@@ -5,43 +12,20 @@ $(function () {
         function () {
             $('.submenu').stop().slideUp(500)
         })
-})
+});
 
-// const slides = document.querySelectorAll('.slideContent img');
-// let currentSlide = 0;
-
-// function nextSlide () {
-//     slides[currentSlide].classList.remove('active');
-//     currentSlide = (currentSlide + 1) % slides.length;
-//     slides[currentSlide].classList.add('active');
-// }
-
-// setInterval(nextSlide, 3000);
-const slides = document.querySelectorAll('.slideContent img');
-let currentSlide = 0;
-
-// 초기 상태 설정
-slides[0].classList.add('active');
-
-function nextSlide() {
-    // 현재 슬라이드에 prev 클래스 추가
-    slides[currentSlide].classList.remove('active');
-    slides[currentSlide].classList.add('prev');
-    
-    // 다음 슬라이드 계산
-    currentSlide = (currentSlide + 1) % slides.length;
-    
-    // 이전 슬라이드의 prev 클래스 제거
-    setTimeout(() => {
-        slides.forEach((slide, index) => {
-            if (index !== currentSlide) {
-                slide.classList.remove('prev');
-            }
-        });
-    }, 500); // transition 시간과 동일하게
-
-    // 다음 슬라이드 활성화
-    slides[currentSlide].classList.add('active');
+//이미지 슬라이드
+function autoslide () {
+    $(slide[sno]).stop().animate({
+        left: '-100%'
+    }, 1000, function () {
+        $(this).css({left: "100%"});
+    });
+    sno ++;
+    if (sno > eno) {
+        sno = 0;
+    }
+    $(slide[sno]).stop().animate({
+        left: '0'
+    }, 1000)
 }
-
-setInterval(nextSlide, 3000);

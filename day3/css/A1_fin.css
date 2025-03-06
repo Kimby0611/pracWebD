@@ -1,19 +1,19 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 ul, li {list-style: none;}
-a {text-decoration: none; color: black;}
+a {text-decoration: none; color: white;}
 .wrap {width: 1200px; height: 700px; margin: 0 auto; position: relative;}
 
 h1 {
     align-items: center;
     display: flex;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-bottom: 10px;
 }
 header {
     height: 100px;
-    background-color: #ffad99;
     display: flex;
     justify-content: space-between;
+    background-color: black;
 }
 nav > ul {
     display: flex;
@@ -32,9 +32,8 @@ nav {
     margin-left: 0;
     top: 50px;
     left: -1px;
-    border: 1px solid black;
-    border-top: none;
     z-index: 1;
+    background-color: black;
 }
 .menu:not(:last-child) .submenu {
     border-right: none;
@@ -49,7 +48,6 @@ nav {
     width: 150px;
     position: relative;
     padding: 15px;
-    border: 1px solid black;
 }
 .menu:not(:last-child) {
     border-right: none;
@@ -61,27 +59,19 @@ li { width: 150px; text-align: center;}
 }
 
 /* slideImg */
-.slideContent {
-    width: 100%;
+.slideContent { 
+    width: 1200px;
     height: 300px;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
-.slideContent img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.slide {
     position: absolute;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    object-fit: cover;
+    top: 0;
+    left: 100%;
 }
-.slideContent img.active {
-    opacity: 1;
+.slide:first-child {
+    left: 0;
 }
 
 /* content */
