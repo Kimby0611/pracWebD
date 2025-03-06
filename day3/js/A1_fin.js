@@ -29,3 +29,49 @@ function autoslide () {
         left: '0'
     }, 1000)
 }
+
+//tab js
+$('#tabNews').mouseover(function () {
+    $(this).css("cursor", "pointer");
+    $(this).css({
+            "background-color" : "gray",
+            "color" : "white",
+            'font-weight' : 'bold'
+        })
+});
+$('#tabNews').mouseleave(function () {
+    $(this).css("cursor" , "none");
+    $(this).css({
+        'background-color' : 'rgb(208, 250, 245)',
+        'color' : 'black',
+        'font-weight' : 'normal'
+    })
+})
+$('#tabNews').click(function (e) {
+    $('#box1').show();
+    $('#box2').hide();
+});
+$('#tabGallery').click(function (e) {
+    $('#box1').hide();
+    $('#box2').show();
+})
+$('#tabGallery').on(
+    {
+        mouseover: function () {
+            $(this).css({
+                    "cursor" : "pointer",
+                    "background-color" : "gray",
+                    "color" : "white",
+                    "font-weight" : "bold"
+                });
+        },
+        mouseleave: function() {
+            $(this).css({
+                "cursor" : "pointer",
+                "background-color" : "rgb(208, 250, 245)",
+                "color" : "black",
+                "font-weight" : "normal"
+            });
+        }
+    }
+)
