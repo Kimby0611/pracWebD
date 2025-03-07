@@ -15,7 +15,7 @@ $('#tab1').mouseover(function () {
         "background-color" : "white",
         "color" : "black",
         "font-weight" : "bold",
-        "font-size" : "16px"
+        "font-size" : "12px"
     });
 });
 $('#tab1').mouseleave(function () {
@@ -43,7 +43,7 @@ $('#tab2').on(
                 "background-color" : "white",
                 "color" : "black",
                 "font-weight" : "bold",
-                "font-size" : "16px"
+                "font-size" : "12px"
             })
         },
         mouseleave: function () {
@@ -57,3 +57,44 @@ $('#tab2').on(
         }
     }
 )
+
+//좌우 슬라이드
+var slide = $('.imgslide > img');
+var sno = 0;
+var eno = slide.length - 1;
+console.log(sno, eno)
+var timer = setInterval('autoslide()', 3000);
+
+function autoslide () {
+    $(slide[sno]).stop().animate({
+        right: '100%'
+    }, 1000, function () {
+        $(this).css({right: "-100%"});
+    });
+    sno ++;
+    if (sno > eno) {
+        sno = 0;
+    }
+    $(slide[sno]).stop().animate({
+        right: '0'
+    }, 1000)
+}
+
+//페이드인
+var slide2 = $('.con2 > img');
+var sno2 = 0;
+var eno2 = slide.length - 1;
+var timer2 = setInterval('autoslide2()', 1000);
+
+function autoslide2 () {
+    $(slide2[sno2]).stop().animate({
+        opacity: 1
+    }, 1000);
+    sno2 ++;
+    if (sno2 > eno2) {
+        sno2 = 0;
+    }
+    $(slide2[sno2]).stop().animate({
+        opacity: 1
+    }, 1000)
+}
