@@ -1,0 +1,60 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: black;}
+.wrap {width: 1200px; height: 700px; margin: 0 auto; position: relative;}
+
+h1 {
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+header {
+    height: 100px;
+    background-color: #ffad99;
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    margin-right: 100px;
+}
+nav {
+    display: flex;
+    align-items: flex-end;
+}
+.submenu {
+    display: none;
+    width: 150px;
+    position: absolute;
+    margin-left: 0;
+    top: 50px;
+    left: -1px;
+    border: 1px solid black;
+    border-top: none;
+}
+.menu:not(:last-child) .submenu {
+    border-right: none;
+}
+.submenu li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.menu {
+    width: 150px;
+    position: relative;
+    padding: 15px;
+    border: 1px solid black;
+}
+.menu:not(:last-child) {
+    border-right: none;
+}
+li { width: 150px; text-align: center;}
+.submenu > li:hover {
+    background-color: aqua;
+    cursor: pointer;
+}

@@ -1,0 +1,116 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: black;}
+.wrap {width: 1200px; height: 700px; margin: 0 auto; position: relative;}
+
+h1 {
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+header {
+    height: 100px;
+    background-color: #ffad99;
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    margin-right: 100px;
+}
+nav {
+    display: flex;
+    align-items: flex-end;
+}
+.submenu {
+    display: none;
+    width: 150px;
+    position: absolute;
+    margin-left: 0;
+    top: 50px;
+    left: -1px;
+    border: 1px solid black;
+    border-top: none;
+    z-index: 1;
+}
+.menu:not(:last-child) .submenu {
+    border-right: none;
+}
+.submenu li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.menu {
+    width: 150px;
+    position: relative;
+    padding: 15px;
+    border: 1px solid black;
+}
+.menu:not(:last-child) {
+    border-right: none;
+}
+li { width: 150px; text-align: center;}
+.submenu > li:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+/* slideImg */
+.slideContent {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.slideContent img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    object-fit: cover;
+}
+.slideContent img.active {
+    opacity: 1;
+}
+
+/* content */
+.content {
+    height: 200px;
+    background-color: #ffcccc;
+    display: flex;
+}
+.content > div {
+    width: 33.33%;
+}
+.con1{
+    background-color: aquamarine;
+}
+.con2{
+    background-color: aliceblue;
+}
+.con3{
+    background-color: #ffcccc;
+}
+footer {
+    height: 100px;
+    background-color: #ffad99;
+    display: flex;
+}
+.f1, f3 {
+    width: 20%;
+}
+.f2 {
+    width: 60%;
+    background-color: #ff8080;
+}

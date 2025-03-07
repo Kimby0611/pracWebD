@@ -1,0 +1,40 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: black;}
+.wrap {width: 1200px; height: 700px; margin: 0 auto; position: relative;}
+
+header {
+    height: 100px;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between; 
+}
+nav {
+    width: 600px;
+}
+nav > ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    bottom: 10px;
+    align-items: flex-end;
+    margin-right: 50px;
+    margin: 0;
+    padding: 0;
+}
+.menu {
+    position: relative;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    z-index: 997;
+    top: 50px;
+}
+.submenu li {
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
+.submenu li:last-child { border-bottom: none; }
